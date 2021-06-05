@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html >
+<body  align="center" style="background-image: url('https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image1_hH9B4gs.max-1000x1000.jpg');">
+<head>
+  <meta charset="UTF-8">
+  <title>BOOM Bike Sharing Application</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 28px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+	background-position: cover;
+
+      }
+	.button {
+	  background-color: #04AA6D; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 20px 10px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	}
+	.button1 {width:100px; border-radius: 12px;}
+    	</style>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1 style="text-align:center">BOOM Bike Sharing Analysis</h1>
+
+    <form align="center" action="{{ url_for('predict')}}"method="post">
+    	<input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="year" placeholder="year" required="required" />
+        <br>
+        <input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="holiday" placeholder="holiday" required="required" />
+        <br>
+		<input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="temperature" placeholder="temperature" required="required" />
+        <br>
+        <input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="windspeed" placeholder="windspeed" required="required" />
+        <br>
+        <input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="spring" placeholder="spring" required="required" />
+        <br>
+		<input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="summer" placeholder="summer" required="required" />
+        <br>
+        <input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="winter" placeholder="winter" required="required" />
+        <br>
+        <input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="Sept" placeholder="Sept" required="required" />
+        <br>
+		<input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="Light Snow" placeholder="Light Snow" required="required" />
+	<br>
+		<input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="Mist & Cloudy" placeholder="Mist & Cloudy" required="required" />
+	<br>
+	<input type="text" style="text-align:center;border: solid;border-radius: 12px;" name="humidity" placeholder="humidity" required="required" />
+	<br>
+	<br>
+
+
+
+        <button align="center" type="submit" style="border: solid" class="button button1">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+     {{predicted_count }}
+
+ </div>
+
+
+</body>
+</html>
