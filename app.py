@@ -10,8 +10,8 @@ from sklearn.preprocessing import MinMaxScaler
 app = Flask(__name__)
 
 # Load Model Files
-model_load = joblib.load('./models/Boom_Bike_lrmodel.pkl')
-scaler_object = joblib.load('./models/Boom_Bike_scaler.pkl')
+model_load = joblib.load(r'./models/Boom_Bike_lrmodel.pkl')
+scaler_object = joblib.load(r'./models/Boom_Bike_scaler.pkl')
 
 @app.route('/', methods=['GET'])
 def home():
