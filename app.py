@@ -17,7 +17,7 @@ scaler_object = joblib.load(r'./models/Boom_Bike_scaler.pkl')
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods = ['POST'])
+@app.route('/predict', methods = ['POST','GET'])
 def predict():
     if request.method == 'POST':
         init_features = [float(x) for x in request.form.values()]
